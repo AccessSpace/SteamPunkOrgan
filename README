@@ -1,0 +1,30 @@
+Steam Punk Organ
+
+This code is part of an Access-Space.org instrument which is made from:-
+  Reclaimed Wood
+  An Open Hardware Arduino microcontroller
+  A reused Computer with a Free Software operating system
+  Creative Commons sound samples from FreeSound
+  Python and Arduino Free Sofware programing languages
+  Pygame, python-firmata and firmata libraries
+  This code
+  
+This code can be got from github.com/AccessSpace/SteamPunkOrgan/
+
+Dependencies:
+  https://github.com/lupeke/python-firmata
+  http://pygame.org/
+  Arduino loaded with the example sketch 'Firmata -> OldStandardFirmata' on /dev/ttyUSB0
+  Hardware specs and wiring diagram to come
+
+The sounds are all from the freesound project and are licensed under Creative Commons CA so we can use them
+
+Downloaded on March 14th, 2012
+     S: steam_burst.wav by pengo_au -- http://www.freesound.org/people/pengo_au/sounds/90143/
+     S: steam.wav by Nummer39 -- http://www.freesound.org/people/Nummer39/sounds/69299/
+     P: Pipe Hiss by DJ Chronos -- http://www.freesound.org/people/DJ%20Chronos/packs/8152/
+     S: steam-whistle 04.wav by klankbeeld -- http://www.freesound.org/people/klankbeeld/sounds/130670/
+     P: SteamPipe Multisample 3 GhostBlow by Jovica -- http://www.freesound.org/people/Jovica/packs/340/
+     S: ORGAN-BRASS END IN G 001.wav by sandyrb -- http://www.freesound.org/people/sandyrb/sounds/85894/
+     S: BRASS END IN A 001.wav by sandyrb -- http://www.freesound.org/people/sandyrb/sounds/85892/
+     S: Accordion C major chord.wav by juskiddink -- http://www.freesound.org/people/juskiddink/sounds/120689/
