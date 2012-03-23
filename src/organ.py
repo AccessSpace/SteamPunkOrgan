@@ -163,7 +163,10 @@ class Pipe:
             
     def update(self):
         iNewInstrument = 0
-        if self.iLight < 700:
+        
+        #print "iLight", self.iLight
+        
+        if self.iLight < 600:
             iNewInstrument = 1
         if self.iCurrentInstrument != iNewInstrument:
             self.iCurrentInstrument = iNewInstrument
@@ -204,8 +207,8 @@ class Pipe:
         
                 
 Pipes = [
-    Pipe(oArduino, 0, 2, 3, [Brass, SteamPipe]),
-    Pipe(oArduino, 1, 3, 5, [SteamWhistle, Accordian])
+    Pipe(oArduino, 0, 3, 3, [Brass, SteamPipe]),
+    Pipe(oArduino, 1, 2, 5, [SteamWhistle, Accordian])
 ]
 
 iInstrumentSet = 0
@@ -215,6 +218,7 @@ while 1:
     oArduino.parse()
     for oPipe in Pipes:
         oPipe.readArduino() #getIR()
+        oPipe.readArduino()
         
     oCurrentTime = datetime.datetime.now()
         
