@@ -180,16 +180,13 @@ class Pipe:
                 self.iLastNote = self.iCurrentNote
                 self.aInstruments[self.iCurrentInstrument][self.iCurrentNote].play()
                 #print 'pipe', self.iIrPin, 'iLastNote', self.iLastNote, 'new iNote', iNote    
-                self.oArduino.analog_write(self.iDialPin, self.fOutStep * iNote)
+                self.setNeedle(iNote)
+                
         else:
             self.aInstruments[self.iCurrentInstrument][self.iLastNote].fadeout(200)
         
     def setNeedle(self, iNote):
-        #iNote = self.getNote()
-        #aNeedleSteps = [10, 60, 80 ,100, 120, 140, 250]
-        aNeedleSteps = [10, 40, 70, 100 ,130, 160, 190, 220]
-        
-        #iNeedle =  self.fOutStep * iNote
+        aNeedleSteps = [180, 165, 150 ,135, 120, 105, 90, 85]
         iNeedle =  aNeedleSteps[iNote + 1]
         
         #print 'iNote', iNote, 'iNeedle', iNeedle
