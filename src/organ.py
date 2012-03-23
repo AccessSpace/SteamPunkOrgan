@@ -189,7 +189,7 @@ class Pipe:
             self.aInstruments[self.iCurrentInstrument][self.iLastNote].fadeout(200)
         
     def setNeedle(self, iNote):
-        aNeedleSteps = [180, 165, 150 ,135, 120, 105, 90, 85]
+        aNeedleSteps = [170, 160, 150 ,140, 130, 120, 110, 90]
         iNeedle =  aNeedleSteps[iNote + 1]
         
         #print 'iNote', iNote, 'iNeedle', iNeedle
