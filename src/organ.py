@@ -162,12 +162,8 @@ class Pipe:
         return fDist < self.fMaxHeight
             
     def update(self):
-        iNewInstrument = 0
-        
-        #print "iLight", self.iLight
-        
-        if self.iLight < 600:
-            iNewInstrument = 1
+        iNewInstrument = self.iLight / 256
+        #print 'self.iLight',self.iLight, 'iNewInstrument', iNewInstrument
         if self.iCurrentInstrument != iNewInstrument:
             self.iCurrentInstrument = iNewInstrument
             self.fNoteLength = (self.fMaxHeight - self.fMinHeight)/ len(self.aInstruments[self.iCurrentInstrument])
@@ -204,8 +200,8 @@ class Pipe:
         
                 
 Pipes = [
-    Pipe(oArduino, 0, 3, 3, [Brass, SteamPipe]),
-    Pipe(oArduino, 1, 2, 5, [SteamWhistle, Accordian])
+    Pipe(oArduino, 0, 3, 3, [SteamWhistle, Accordian, Brass, SteamPipe]),
+    Pipe(oArduino, 1, 2, 5, [SteamWhistle, Accordian, Brass, SteamPipe])
 ]
 
 iInstrumentSet = 0
